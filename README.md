@@ -108,11 +108,13 @@
 
 <img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011555401.png" alt="image-20231201155546352" style="zoom: 50%;" />
 
+
 #### 批次分数线查询
 
-<img src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20231201155845232.png" alt="image-20231201155845232" style="zoom:25%;" />
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011600264.png" alt="image-20231201160056191" style="zoom: 25%;" />
+
+
 
 #### 我的
 
 <img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011554160.png" alt="image-20231201155445074" style="zoom:25%;" />
-
