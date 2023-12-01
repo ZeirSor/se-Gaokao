@@ -1,9 +1,8 @@
----
-
 **需求场景：**
 为高考学子提供智能填报志愿和专业的系统，根据学生的高考科目、学科、分数排名以及大学录取的历史数据，推荐学生适合高校的录取概率。系统应具备地区和学校类型的筛选功能。
 
 **系统功能要求：**
+
 1. 智能填报志愿和专业推荐。
 2. 根据学生的高考科目、学科、分数排名，推荐适合的高校及录取概率。
 3. 地区和学校类型的筛选功能。
@@ -16,8 +15,6 @@
    - 高考U选
    - 夸克App-阿里智能信息事业群旗下夸克App
    - 手机智能填报志愿app排行榜TOP10下载 ([链接](https://www.pianwan.com/s/zj-562416))
-
----
 
 # **高考志愿智能填报系统的需求分析和原型设计**
 
@@ -74,7 +71,7 @@
 
 -   首页
 
-<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202311292116511.png" alt="image-20231129211659260" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011554525.png" alt="image-20231201155406434" style="zoom:25%;" />
 
 #### 1. 登录/注册界面
 
@@ -88,7 +85,7 @@
 
 #### 3. 志愿填报界面
 
-<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202311292127459.png" alt="image-20231129212737396" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011554954.png" alt="image-20231201155420840" style="zoom:25%;" />
 
 -   输入高考科目和分数
 -   显示推荐的高校及专业
@@ -96,8 +93,7 @@
 
 #### 4. 学校信息查询
 
-
-<img src="../AppData/Roaming/Typora/typora-user-images/image-20231129214608796.png" alt="image-20231129214608796" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011556164.png" alt="image-20231201155640117" style="zoom:50%;" />
 
 
 -   学校招生情况查询
@@ -108,15 +104,15 @@
 
 #### 5. 专业信息查询
 
-<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202311292146717.png" alt="image-20231129214622670" style="zoom:50%;" />
-
 -   专业筛选
 
-#### 8. 我的
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011555401.png" alt="image-20231201155546352" style="zoom: 50%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202311292146085.png" alt="image-20231129214649042" style="zoom:50%;" />
+#### 批次分数线查询
 
-#### 9. 页面导航
+<img src="C:/Users/ASUS/AppData/Roaming/Typora/typora-user-images/image-20231201155845232.png" alt="image-20231201155845232" style="zoom:25%;" />
 
--   顶部导航栏
--   底部导航栏
+#### 我的
+
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011554160.png" alt="image-20231201155445074" style="zoom:25%;" />
+
