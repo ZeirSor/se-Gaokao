@@ -20,9 +20,9 @@
 
 # **智慧选途**
 
-### 一、需求分析
+## 1. 需求分析
 
-#### 1. 用户需求
+### 1.1. 用户需求
 
 1.1 **用户类型**
 
@@ -39,7 +39,7 @@
 -   查看大学录取历史数据
 -   获取高考相关资讯和建议
 
-#### 2. 系统功能需求
+### 1.2. 系统功能需求
 
 2.1 **用户管理**
 
@@ -65,56 +65,78 @@
 
 -   筛选专业
 
-### 二、原型设计
+## 2. 原型设计
 
 **只是草稿**
 
--   首页
-
-<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011554525.png" alt="image-20231201155406434" style="zoom:25%;" />
-
-#### 1. 登录/注册界面
+### 2.1. 登录/注册界面
 
 -   提供注册和登录按钮
 -   *****支持第三方登录（如微信、QQ）
 
-#### 2. 个人信息界面
+### 2.2. 个人信息界面
 
 -   展示用户基本信息
 -   提供修改密码和注销账户选项
 
-#### 3. 志愿填报界面
+### 2.3. 首页
 
-<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011554954.png" alt="image-20231201155420840" style="zoom:25%;" />
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060041266.png" alt="image-20231206004159119" style="zoom:40%;" />
 
--   输入高考科目和分数
--   显示推荐的高校及专业
--   提供模拟填报按钮
+#### 2.3.1. 批次分数线查询
 
-#### 4. 学校信息查询
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060046649.png" alt="image-20231206004652614" style="zoom:50%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011556164.png" alt="image-20231201155640117" style="zoom:50%;" />
+
+
+### 2.4. 志愿填报界面
+
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060043304.png" alt="image-20231206004357266" style="zoom:50%;" />
+
+-   可以根据排序、地区、院校类型、专业类型选择
+-   推荐等级分为 可冲击、较稳妥、可保底
+
+### 2.5. 学校信息查询
+
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060045106.png" alt="image-20231206004511048" style="zoom:50%;" />
 
 
 -   学校招生情况查询
 -   专业历年录取数据查询
 -   大学录取历史数据展示
 -   高考相关资讯浏览
--   地区、学校类型等条件筛选
+-   地区、学校类型、学校层次等条件筛选
+-   收藏功能
 
-#### 5. 专业信息查询
-
--   专业筛选
+### 2.6. 专业信息查询
 
 <img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011555401.png" alt="image-20231201155546352" style="zoom: 50%;" />
 
+-   可根据专业名称查询
+-   可根据专业层次和专业类别筛选
+-   可收藏某个专业
+-   专业有
+    -   简介
+        -   介绍
+        -   课程
+        -   就业
+        -   男女比
+        -   关键词
+    -   开设院校
+    -   院校分数线
 
-#### 批次分数线查询
+### 2.7. 高考圈
 
-<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011600264.png" alt="image-20231201160056191" style="zoom: 25%;" />
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060047303.png" alt="image-20231206004726266" style="zoom:50%;" />
 
+### 2.8. 我的
 
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060045919.png" alt="image-20231206004552884" style="zoom: 50%;" />
 
-#### 我的
+#### 2.8.1. 我的志愿表
 
-<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312011554160.png" alt="image-20231201155445074" style="zoom:25%;" />
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060048648.png" alt="image-20231206004848601" style="zoom:50%;" />
+
+#### 2.8.2. 收藏
+
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060049625.png" alt="image-20231206004912579" style="zoom:50%;" />
