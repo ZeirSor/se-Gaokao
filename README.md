@@ -67,6 +67,8 @@
 
 ## 2. 原型设计
 
+> 建议，参考：80% 夸克高考+20%掌上高考
+
 **只是草稿**
 
 ### 2.1. 登录/注册界面
@@ -129,6 +131,10 @@
 
 <img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060047303.png" alt="image-20231206004726266" style="zoom:50%;" />
 
+#### 用户主页？
+
+
+
 ### 2.8. 我的
 
 <img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060045919.png" alt="image-20231206004552884" style="zoom: 50%;" />
@@ -140,3 +146,309 @@
 #### 2.8.2. 收藏
 
 <img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312060049625.png" alt="image-20231206004912579" style="zoom:50%;" />
+
+## 数据库设计
+
+### 用户信息表
+
+-   用户ID
+-   用户昵称
+-   用户账号
+-   用户密码
+-   wxid
+-   用户身份（学生、家长、老师）
+-   获赞数量
+-   粉丝数量
+-   关注数量
+-   标签
+-   IsDelete：0，1
+-   AddTime
+
+### 用户粉丝表
+
+-   粉丝关系ID
+
+-   用户ID
+-   粉丝用户ID
+-   关注时间
+-   IsDelete：0，1
+-   AddTime
+
+### 用户关注表
+-   关注关系ID
+-   用户ID
+-   被关注用户ID
+-   关注时间
+-   IsDelete：0，1
+-   AddTime
+
+### 高考信息表
+
+-   高考信息表ID
+-   用户ID
+-   区域ID
+-   批次类型ID
+-   高年年份
+-   选科组合：6位二进制表示，选中标1（六科分别为物化生史政地）
+-   高考分数
+-   高考排名
+-   IsDelete：0，1
+-   AddTime
+
+### 院校录取概率表
+
+-   院校录取概率表ID
+-   高考信息表ID
+-   大学ID
+-   录取概率
+-   类型（0-冲 1-稳 2 保）
+-   IsDelete：0，1
+-   AddTime
+
+### 院校专业录取概率表
+
+-   院校专业录取概率表ID
+-   院校录取概率表ID
+-   高考信息表ID
+-   大学ID
+-   专业ID
+-   录取概率
+-   类型（0-冲 1-稳 2 保）
+-   IsDelete：0，1
+-   AddTime
+
+### 大学收藏表
+
+-   大学收藏ID
+-   用户ID
+-   大学ID
+-   收藏时间
+-   IsDelete：0，1
+-   AddTime
+
+### 专业收藏表
+
+-   专业收藏ID
+-   用户ID
+-   专业ID
+-   收藏时间
+-   IsDelete：0，1
+-   AddTime
+
+### 志愿表
+
+-   志愿表ID
+-   用户ID
+-   志愿表名称
+-   修改时间
+-   高考信息表ID
+-   IsDelete：0，1
+-   AddTime
+
+### 大学志愿表项
+
+-   大学志愿表项ID
+-   志愿表ID
+-   大学ID
+-   IsDelete：0，1
+-   AddTime
+
+### 专业志愿表项
+
+-   专业志愿表项ID
+-   大学志愿表项ID
+-   专业ID
+-   IsDelete：0，1
+-   AddTime
+
+### 大学排名表
+
+-   大学ID
+-   大学排名
+-   排名分数
+-   档次985
+-   档次211
+-   档次双一流
+-   IsDelete：0，1
+-   AddTime
+
+### 大学位置表
+
+-   大学ID
+-   区域ID
+-   IsDelete：0，1
+-   AddTime
+
+### 区域表
+
+-   区域ID
+-   区域名称
+-   ParentID (父级区域ID)
+-   Type：记录当前的区域级别：0--直辖市，1--省，2--市；3-地级市；4-区
+-   IsDelete：0，1
+-   AddTime
+
+### 批次类型表
+
+-   批次类型ID
+-   批次名称
+-   IsDelete：0，1
+-   AddTime
+
+### 区域批次表
+
+-   区域批次表ID
+-   区域ID
+-   年份
+-   批次类型ID
+-   科目
+-   批次分数
+-   IsDelete：0，1
+-   AddTime
+
+### 大学录取分数线表
+
+-   大学录取分数线表ID
+-   大学ID
+-   区域ID
+-   年份
+-   录取分数线
+-   最低位次
+-   IsDelete：0，1
+-   AddTime
+
+### 大学
+
+-   大学ID
+-   大学名称
+-   院校层次
+-   院校类型
+-   地址
+-   电话
+-   官网
+-   景色
+-   IsDelete：0，1
+-   AddTime
+
+### 专业类型表
+
+-   专业类型ID
+-   专业类型名称
+-   IsDelete：0，1
+-   AddTime
+
+### 专业大类表
+
+-   专业大类ID
+-   专业类型ID
+-   专业大类名称
+-   IsDelete：0，1
+-   AddTime
+
+### 专业
+
+-   专业ID
+-   专业大类ID
+-   专业名称
+-   专业简介
+-   开设课程
+-   就业方向
+-   第一印象
+-   IsDelete：0，1
+-   AddTime
+
+### 大学 _专业 _ 省份
+
+-   大学 _专业 _ 省份 ID
+-   大学ID
+-   专业ID
+-   区域ID
+-   批次类型（0，1）
+-   计划人数
+-   分数线
+-   最低位次
+-   年份
+-   限选科目：6位二进制表示，选中标1（六科分别为物化生史政地）；对于某一专业 不限选科6科全1，限选标1其他标0
+-   IsDelete：0，1
+-   AddTime
+
+### 专业组表
+
+-   专业组ID
+-   专业组名称
+-   学制
+-   学费
+-   招生计划
+-   选课科目要求
+-   IsDelete：0，1
+-   AddTime
+
+### 省份_专业组__专业表
+
+-   ID
+-   区域ID
+-   专业组ID
+-   专业ID
+-   批次类型（0，1）
+-   IsDelete：0，1
+-   AddTime
+
+### 一分一段表
+
+-   一分一段ID
+
+-   区域ID
+-   年份
+-   分数
+-   人数
+-   累计人数
+-   IsDelete：0，1
+-   AddTime
+
+### 高考圈动态表
+
+-   动态ID
+-   用户ID
+-   动态内容
+-   点赞数量
+-   回复数量
+-   发布时间
+-   区域ID
+-   IsDelete：0，1
+-   AddTime
+
+Comment 表:
+
+-   CommentID (评论ID):
+    -   类型：主键
+    -   说明：唯一标识每条评论和回复的编号。
+-   Content (评论内容):
+    -   类型：文本
+    -   说明：评论或回复的具体内容。
+-   Likes (点赞数量):
+    -   类型：整数
+    -   说明：评论或回复收到的点赞数量。
+-   Replies (回复数量):
+    -   类型：整数
+    -   说明：评论或回复收到的回复数量。
+-   Date (评论或回复时间):
+    -   类型：日期时间
+    -   说明：评论或回复的发表时间。
+-   UserID (用户ID):
+    -   类型：外键
+    -   说明：与User表的UserID关联，表示发表评论或回复的用户。
+-   ArticleID (高考圈动态ID):
+    -   类型：外键
+    -   说明：与Article表的ArticleID关联，表示评论或回复所属的文章。
+-   区域ID
+-   **ParentID (父评论ID):**
+    -   类型：外键
+    -   说明：与Comment表的CommentID关联，表示回复指向的评论。
+-   IsDelete：0，1
+-   AddTime
+
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312191208355.png" alt="image-20231219120857111" style="zoom:33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312191209288.png" alt="image-20231219120909836" style="zoom:33%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/ZeirSor/picgo_img@main/202312191209364.png" alt="image-20231219120923720" style="zoom:33%;" />
